@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="uwp.MainPage">
+
+    <StackLayout x:Name="MainWrapper">
+        <StackLayout x:Name="MenuWrapper" HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand">
+            <Button Text="Заявки" ClassId="q1" Clicked="menu_click" Margin="-50,0,0,0" HorizontalOptions="Center" FontAttributes="Italic" BackgroundColor="#47D4C0" Font="" FontSize="Large" MinimumWidthRequest="-1" WidthRequest="200" CornerRadius="10"/>
+            <Button Text="Чат" ClassId="q2" Clicked="menu_click" HorizontalOptions="Center" BackgroundColor="#9C60DF" FontAttributes="Italic" WidthRequest="200" CornerRadius="10" FontSize="Large"/>
+            <Button Text="Bitcoin" ClassId="q3" Clicked="menu_click" HorizontalOptions="Center" BackgroundColor="#6BDF36" FontAttributes="Italic" WidthRequest="200" Margin="50,0,0,0" CornerRadius="10" FontSize="Large"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

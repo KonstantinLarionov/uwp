@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid"
+             
+          mc:Ignorable="d"
+             x:Class="uwp.view1">
+  <ViewCell.View>
+        <StackLayout HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" FlowDirection="MatchParent">
+            
+            <Label HorizontalOptions="Center" Text="------ Список заявок на обмен ------" />
+
+            <FlexLayout HorizontalOptions="Start" JustifyContent="SpaceBetween">
+                <Button Text="Обновить" Clicked="refresh" FontAttributes="Italic" Margin="10,0,0,0"/>
+                <Button  Text="назад в меню" Clicked="back" HorizontalOptions="End" FontAttributes="Italic" Margin="0,0,10,0"/>
+            </FlexLayout>
+
+            <dg:DataGrid x:Name="grid" ActiveRowColor="#000000" BackgroundColor="#FFFFFF" BorderColor="#000000">
+                <dg:DataGrid.Columns>
+                    <dg:DataGridColumn Title="Id" PropertyName="Id"  BindingContext="{Binding Id}"/>
+                    <dg:DataGridColumn Title="About" PropertyName="About" BindingContext="{Binding About}"/>
+                </dg:DataGrid.Columns>
+            </dg:DataGrid>
+            
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>
